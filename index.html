@@ -1,0 +1,672 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<title>失智症與神經退化疾病＋腦血管疾病與中樞神經退化疾病的預防</title>
+<link rel="stylesheet" href="fonts.css?v=5bea1193">
+<link rel="stylesheet" href="deck.css?v=1a39706c">
+<style id="k-neuro">
+/* 神經系統藥理治療學 2026：本案專用樣式（k- 前綴；顏色只寫 hex；組裝時 inline 進 index.html） */
+:root{--ep:#5B3FA0;--ep-wash:#EFEBF8;--st:#C2410C;--st-wash:#FCEDE4;--ha:#B45309;--ha-wash:#FDF3E3;
+  --dm:#0F4C5C;--dm-wash:#E3F0F2;--pd:#2E8B74;--pd-wash:#E5F4EF;--mech:#1F6FB2;--mech-wash:#E6F0FA}
+
+/* 封面：純排版，不放插畫 */
+.k-slide.k-ncover{padding:0;display:none;flex-direction:row}
+.k-slide.k-ncover.is-active{display:flex}
+.k-ncover .k-nc-l{flex:0 0 1180px;padding:150px 0 0 120px;display:flex;flex-direction:column}
+.k-ncover .k-nc-kick{margin:0;font-size:30px;font-weight:900;letter-spacing:.12em;color:#1F6FB2}
+.k-ncover h1{margin:22px 0 0;font-family:"Noto Serif TC",serif;font-size:104px;line-height:1.12;font-weight:900;color:#1E2833}
+.k-ncover .k-nc-sub{margin:30px 0 0;font-size:38px;line-height:1.5;color:#3B4754;max-width:980px}
+.k-ncover .k-nc-meta{margin-top:auto;padding-bottom:130px}
+.k-ncover .k-nc-meta p{margin:0;font-size:30px;line-height:1.6;color:#3B4754}
+.k-ncover .k-nc-meta p.k-who{font-size:38px;font-weight:900;color:#1E2833}
+.k-ncover .k-nc-r{flex:1 1 auto;display:flex;flex-direction:column;justify-content:center;gap:22px;padding:90px 110px 120px 30px;height:1028px;box-sizing:border-box}
+.k-ncover .k-nc-l{height:1028px;box-sizing:border-box}
+/* ?all=1（截圖、QA、PDF）只顯示預設分頁；替代分頁由 PPTX 狀態頁與主講切換呈現 */
+.k-slide[data-step="all"] .k-alt{display:none}
+.k-nc-dz{display:flex;align-items:center;gap:22px;padding:22px 30px;border-radius:18px;background:#FFFFFF;border:3px solid #E3E6E9}
+.k-nc-dz b{flex:0 0 auto;width:64px;height:64px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  font-size:30px;font-weight:900;color:#FFFFFF}
+.k-nc-dz span{font-size:34px;font-weight:900;color:#1E2833}
+.k-nc-dz small{display:block;font-size:24px;font-weight:700;color:#5F6B77;margin-top:4px}
+
+/* 機轉圖：突觸卡片（原生 HTML，轉 PPTX 可編輯） */
+.k-syn{display:flex;flex-direction:column;gap:10px}
+.k-tg .k-tg-drug{font-size:24px}
+.k-syn-row{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.k-syn-band{display:flex;align-items:center;gap:14px;font-size:24px;font-weight:900;color:#5F6B77}
+.k-syn-band::after{content:"";flex:1 1 auto;height:3px;background:#E3E6E9}
+.k-tg{position:relative;border-radius:16px;padding:12px 16px 12px 70px;background:#FFFFFF;border:3px solid #E3E6E9}
+.k-tg i{position:absolute;left:16px;top:16px;width:44px;height:44px;border-radius:50%;font-style:normal;
+  display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:900;color:#FFFFFF;background:#5B3FA0}
+.k-tg h4{margin:0;font-size:30px;line-height:1.2;font-weight:900;color:#1E2833}
+.k-tg .k-tg-what{margin:4px 0 0;font-size:24px;color:#5F6B77}
+.k-tg .k-tg-drug{margin:8px 0 0;font-size:25px;font-weight:700;line-height:1.35;color:#5B3FA0}
+.k-tg.k-blk{border-color:#C2410C}.k-tg.k-blk i{background:#C2410C}
+.k-tg.k-enh{border-color:#3F7A55}.k-tg.k-enh i{background:#3F7A55}
+.k-syn-rel{display:flex;align-items:center;justify-content:center;gap:16px;height:54px;border-radius:12px;background:#EFEBF8;
+  font-size:26px;font-weight:900;color:#5B3FA0;overflow:hidden;position:relative}
+.k-syn-rel .k-dot{width:14px;height:14px;border-radius:50%;background:#5B3FA0;opacity:.75}
+.k-syn-key{display:flex;gap:26px;font-size:24px;color:#3B4754;align-items:center}
+.k-syn-key span{display:flex;align-items:center;gap:8px}
+.k-syn-key em{display:inline-block;width:22px;height:22px;border-radius:6px;font-style:normal}
+.k-multi{border-radius:14px;padding:14px 22px;background:#F0F2F4;font-size:26px;line-height:1.4;color:#1E2833}
+.k-multi b{color:#5B3FA0}
+
+/* 原文圖框 */
+.k-lit{display:flex;flex-direction:column;gap:10px;min-height:0;height:100%}
+.k-lit .k-litbox{position:relative;flex:1 1 auto;min-height:0;border:2px solid #E3E6E9;border-radius:12px;background:#FFFFFF}
+.k-lit .k-litbox img{position:absolute;inset:10px;width:calc(100% - 20px);height:calc(100% - 20px);object-fit:contain}
+.k-lit .k-litcap{margin:0;font-size:22px;line-height:1.4;color:#5F6B77}
+.k-lit .k-litcap b{color:#1E2833}
+.k-badge{display:inline-block;padding:2px 12px;border-radius:999px;font-size:20px;font-weight:900;color:#FFFFFF;background:#3F7A55;vertical-align:2px}
+.k-badge.k-cr{background:#B5482F}
+
+/* 數字卡 */
+.k-kpis{display:flex;flex-direction:column;gap:16px}
+.k-kpi{border-radius:16px;padding:16px 24px;background:#F0F2F4}
+.k-kpi .k-kl{margin:0;font-size:24px;font-weight:900;color:#5F6B77}
+.k-kpi .k-kv{margin:2px 0 0;font-family:"Noto Serif TC",serif;font-size:50px;line-height:1.15;font-weight:900;color:#1E2833}
+.k-kpi .k-kv small{font-family:"Noto Sans TC",sans-serif;font-size:26px;font-weight:700;color:#3B4754}
+.k-kpi .k-kd{margin:4px 0 0;font-size:25px;line-height:1.35;color:#3B4754}
+.k-kpi.k-good{background:#E9F3EC}.k-kpi.k-good .k-kv{color:#3F7A55}
+.k-kpi.k-neu{background:#E8EFF7}.k-kpi.k-neu .k-kv{color:#24476E}
+.k-news{display:flex;gap:18px;align-items:stretch;border-radius:16px;padding:14px;background:#FDF6DD}
+.k-news img{flex:0 0 330px;width:330px;height:224px;object-fit:cover;object-position:top;border:2px solid #E3E6E9;border-radius:8px;background:#FFFFFF}
+.k-news div{font-size:24px;line-height:1.4;color:#1E2833}
+.k-news b{display:block;font-size:26px;margin-bottom:4px}
+
+/* 比較表（抗類澱粉） */
+table.k-cmp{width:100%;border-collapse:separate;border-spacing:0;font-size:25px}
+table.k-cmp th{padding:10px 18px;font-size:27px;font-weight:900;text-align:left;color:#FFFFFF}
+table.k-cmp th.k-lec{background:#3F7A55;border-radius:12px 0 0 0}
+table.k-cmp th.k-don{background:#B5482F;border-radius:0 12px 0 0}
+table.k-cmp th.k-rowh{background:#FFFFFF;color:#5F6B77;width:220px}
+table.k-cmp td{padding:12px 18px;border-bottom:2px solid #F0F2F4;line-height:1.35;vertical-align:top}
+table.k-cmp td.k-rh{font-weight:900;color:#1E2833;white-space:nowrap}
+table.k-cmp td b{font-family:"Noto Serif TC",serif;font-size:30px;color:#1E2833}
+
+/* CGRP 機轉：三段式訊號鏈＋五個阻斷點 */
+.k-cg{display:grid;grid-template-columns:1fr 70px 1fr 70px 1fr;align-items:center;gap:0}
+.k-cg-node{border-radius:18px;padding:20px 22px;background:#FFFFFF;border:3px solid #E3E6E9;min-height:190px;
+  display:flex;flex-direction:column;gap:8px;position:relative}
+.k-cg-node h4{margin:0;font-size:32px;font-weight:900;color:#1E2833}
+.k-cg-node p{margin:0;font-size:25px;line-height:1.4;color:#3B4754}
+.k-cg-arr{height:6px;background:#B45309;position:relative;margin-right:14px}
+.k-cg-arr::after{content:"";position:absolute;right:-22px;top:-11px;border:14px solid transparent;border-left:20px solid #B45309}
+.k-cg-arr .k-pulse{position:absolute;top:-4px;left:0;width:14px;height:14px;border-radius:50%;background:#B45309}
+.k-pin{display:inline-flex;align-items:center;justify-content:center;width:46px;height:46px;border-radius:50%;
+  font-size:24px;font-weight:900;color:#B45309;background:#FFFFFF;border:3px solid #B45309}
+.k-cg-pins{display:flex;gap:8px;flex-wrap:wrap}
+.k-blocks{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:22px}
+.k-blk5{border-radius:16px;padding:14px 16px;background:#FDF3E3;border:3px solid transparent;
+  display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-start;text-align:left;font:inherit;color:inherit;cursor:pointer}
+.k-blk5 .k-use{margin-top:auto;padding-top:10px;display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:22px;color:#5F6B77}
+.k-u{display:inline-block;padding:2px 10px;border-radius:999px;font-size:21px;font-weight:900;color:#FFFFFF}
+.k-u.k-ua{background:#B5482F}.k-u.k-up{background:#24476E}.k-u.k-ux{background:#5F6B77}
+.k-blocks{align-items:stretch}
+.k-blk5 .k-pin{width:40px;height:40px;font-size:22px}
+.k-blk5 h5{margin:8px 0 2px;font-size:26px;font-weight:900;color:#1E2833}
+.k-blk5 p{margin:0;font-size:23px;line-height:1.35;color:#3B4754}
+.k-slide[data-step="1"] .k-blk5.k-b1,.k-slide[data-step="2"] .k-blk5.k-b2,.k-slide[data-step="3"] .k-blk5.k-b3,
+.k-slide[data-step="4"] .k-blk5.k-b4,.k-slide[data-step="5"] .k-blk5.k-b5{border-color:#B45309;background:#FFFFFF}
+.k-slide[data-step="1"] .k-cg .k-p1,.k-slide[data-step="2"] .k-cg .k-p2,.k-slide[data-step="3"] .k-cg .k-p3,
+.k-slide[data-step="4"] .k-cg .k-p4,.k-slide[data-step="5"] .k-cg .k-p5{background:#B45309;color:#FFFFFF}
+
+/* 章節頁：左側章名＋重點，右側生圖（圖中無字） */
+.k-slide.k-chap{padding:0;display:none;flex-direction:row}
+.k-slide.k-chap.is-active{display:flex}
+.k-chap .k-ch-l{flex:0 0 900px;height:1028px;box-sizing:border-box;padding:120px 40px 80px 110px;display:flex;flex-direction:column}
+.k-chap .k-ch-no{margin:0;font-family:"Noto Serif TC",serif;font-size:120px;font-weight:900;line-height:1}
+.k-chap h2{margin:10px 0 0;font-family:"Noto Serif TC",serif;font-size:84px;font-weight:900;color:#1E2833}
+.k-chap .k-ch-en{margin:6px 0 30px;font-size:30px;font-weight:700;color:#5F6B77;letter-spacing:.06em}
+.k-chap ol{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:14px}
+.k-chap li{display:flex;gap:16px;align-items:baseline;font-size:30px;line-height:1.35;color:#1E2833}
+.k-chap li b{flex:0 0 auto;width:44px;height:44px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:24px;color:#FFFFFF}
+.k-chap .k-ch-r{flex:1 1 auto;height:1028px;position:relative}
+.k-chap .k-ch-r img{position:absolute;inset:60px 60px 60px 0;width:calc(100% - 60px);height:calc(100% - 120px);object-fit:contain}
+/* 長條圖（原生 HTML，PPTX 可編輯） */
+.k-hb{display:flex;flex-direction:column;gap:10px}
+.k-hb .k-hr{display:grid;grid-template-columns:var(--lab,300px) 1fr 110px;align-items:center;gap:14px}
+.k-hb .k-hl{font-size:24px;font-weight:700;text-align:right;color:#1E2833}
+.k-hb .k-ht{height:34px;background:#F0F2F4;border-radius:6px;overflow:hidden}
+.k-hb .k-hf{height:100%;border-radius:6px;background:#24476E}
+.k-hb .k-hv{font-family:"Noto Serif TC",serif;font-size:30px;font-weight:900;color:#1E2833}
+.k-figimg{position:relative;flex:1 1 auto;min-height:0}
+.k-figimg img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
+.k-gencap{margin:6px 0 0;font-size:20px;color:#5F6B77}
+.k-take{margin-top:18px;border-radius:14px;padding:14px 24px;background:#1E2833;color:#FFFFFF;font-size:28px;font-weight:900;line-height:1.4}
+.k-chip{display:inline-block;padding:4px 16px;border-radius:999px;font-size:22px;font-weight:900;color:#FFFFFF;margin-right:10px;vertical-align:4px}
+
+/* 動態展示（只動 transform／opacity；html-deck-pro interaction.md 規範） */
+@keyframes k-flowdot{0%{transform:translateX(-140px);opacity:0}20%{opacity:.8}80%{opacity:.8}100%{transform:translateX(140px);opacity:0}}
+@keyframes k-pulse{0%{transform:translateX(0);opacity:0}15%{opacity:1}100%{transform:translateX(60px);opacity:0}}
+.k-slide.is-active .k-syn-rel .k-dot{animation:k-flowdot 2.4s var(--k-out) infinite}
+.k-slide.is-active .k-syn-rel .k-dot:nth-child(2){animation-delay:.8s}
+.k-slide.is-active .k-syn-rel .k-dot:nth-child(3){animation-delay:1.6s}
+.k-syn-rel .k-dots{position:absolute;left:50%;top:50%;width:0;height:0}
+.k-syn-rel .k-dots .k-dot{position:absolute;left:-7px;top:-7px}
+.k-syn-rel .k-rl{position:relative;z-index:1;padding:0 18px;background:#EFEBF8}
+.k-slide.is-active .k-cg-arr .k-pulse{animation:k-pulse 1.6s linear infinite}
+@media (prefers-reduced-motion:reduce){
+  .k-slide.is-active .k-syn-rel .k-dot,.k-slide.is-active .k-cg-arr .k-pulse{animation:none}
+}
+@media print{.k-syn-rel .k-dot,.k-cg-arr .k-pulse{animation:none!important}}
+
+.k-res{margin-top:18px;border-radius:14px;padding:12px 24px;background:#B45309;color:#FFFFFF;font-size:28px;font-weight:900;line-height:1.4}
+
+/* 2026-11-02 全份共用調整：副標橫跨全寬（膠囊只在標題那一列）；學術版字級加大以減少留白 */
+.k-head .k-sub{margin-right:calc(-1 * var(--navw,480px))}
+.k-card h3{font-size:32px}
+.k-card p{font-size:27px;line-height:1.45}
+.k-step h3{font-size:33px}
+.k-step p{font-size:27px;line-height:1.45}
+.k-warn p{font-size:28px}
+.k-body .k-take{font-size:30px}
+/* 案例題、表格、長條圖加大（學術版留白審查 2026-11-02） */
+.k-opts{gap:20px}
+.k-opt{padding:24px 28px}
+.k-opt .k-say{font-size:33px}
+.k-opt .k-fb{font-size:28px}
+table.k-table{font-size:28px}
+table.k-table td{padding:16px 20px}
+table.k-table td.k-item{font-size:29px}
+.k-hb{gap:16px}
+.k-hb .k-ht{height:46px}
+.k-hb .k-hl{font-size:27px}
+.k-hb .k-hv{font-size:34px}
+.k-evi p{font-size:28px}
+.k-hb.k-tight{gap:10px}.k-hb.k-tight .k-ht{height:36px}
+.k-evi.k-evcol{flex-direction:column;align-items:flex-start;gap:6px}
+/* 帕金森治療窗示意（原生 HTML 色帶） */
+.k-pdwin{display:flex;flex-direction:column;height:300px;border-radius:14px;overflow:hidden;border:2px solid #E3E6E9}
+.k-pdz{display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:900}
+.k-pdz-dys{background:#FBEDE8;color:#B5482F}
+.k-pdz-on{background:#2E8B74;color:#FFFFFF}
+.k-pdz-off{background:#F0F2F4;color:#5F6B77}
+
+/* 2026-11-02 留白審查第二輪：再放大主要元件；剩餘空間讓內容均勻分布（不再全擠在上半部） */
+.k-body{justify-content:space-evenly}
+table.k-table{font-size:30px}
+table.k-table td{padding:20px 22px}
+table.k-table td.k-item{font-size:30px}
+table.k-table th{font-size:25px}
+table.k-cmp{font-size:28px}
+table.k-cmp td{padding:16px 20px}
+.k-card h3{font-size:34px}
+.k-card p{font-size:29px}
+.k-step h3{font-size:34px}
+.k-step p{font-size:28px}
+.k-tg h4{font-size:32px}
+.k-tg .k-tg-what{font-size:26px}
+.k-tg .k-tg-drug{font-size:26px}
+.k-cg-node h4{font-size:34px}
+.k-cg-node p{font-size:27px}
+.k-hb .k-ht{height:54px}
+.k-hb{gap:18px}
+.k-hb .k-hl{font-size:28px}
+.k-hb .k-hv{font-size:36px}
+.k-body .k-take{font-size:32px;padding:18px 26px}
+.k-evi .k-big2{font-size:64px}
+.k-warn p{font-size:30px}
+.k-hb.k-tight .k-ht{height:38px}.k-hb.k-tight{gap:8px}.k-hb.k-tight .k-hv{font-size:30px}.k-hb.k-tight .k-hl{font-size:25px}
+</style>
+</head>
+<body>
+<!-- lecture-deck-workflow 樣板｜canvas 1920x1080
+     寫頁規則：
+       <section class="k-slide" data-chapter="章名" data-title="頁名" [data-notes="主講提示（不配音）"]>
+       逐步揭示：元素加 data-s="1"、data-s="2"…（第 n 步出現）；選擇題 .k-opt 加 data-reveal="n" 讓自動播放在第 n 步揭曉
+       逐字稿：<template class="k-narr"><p data-step="0">一句一拍…</p><p data-step="1">…</p></template>
+               data-step＝這句開始時要揭示到第幾步；同一步可以有多句
+       出處：<p class="k-cite">…</p>（每頁數字都要有出處）
+     操作：主講 ← → 翻頁／N 講稿／O 總覽／B 黑屏／F 全螢幕；自動 空白鍵 播放暫停／← → 上下句／S 字幕／M 配樂 -->
+
+<main id="k-stage">
+
+<section class="k-slide k-ncover" data-title="封面">
+  <div class="k-nc-l" style="padding:100px 0 0 100px;flex:0 0 1100px">
+    <p class="k-nc-kick" style="font-size:26px">馬偕醫學院醫學系 · 四年級神經學課程</p>
+    <h1 style="font-size:86px;line-height:1.15;margin-top:16px">失智症與神經退化疾病<br>腦血管疾病與中樞神經退化預防</h1>
+    <p class="k-nc-sub" style="font-size:32px;line-height:1.45;margin-top:20px">從臨床症候群、生物標記診斷到新藥與預防：2024–2026 新準則整合版</p>
+    <div class="k-nc-meta" style="padding-bottom:50px">
+      <p class="k-who" style="font-size:32px">陳培豪　醫師</p>
+      <p style="font-size:24px">馬偕紀念醫院 神經科 · 失智防治中心；馬偕醫學院醫學系</p>
+      <p style="margin-top:8px;font-size:20px;color:#718096">2026 最新整合版｜證據檢索截止 2026-09-26</p>
+    </div>
+  </div>
+  <div class="k-nc-r" style="padding:60px 80px 60px 20px;gap:18px">
+    <div class="k-nc-dz" style="border-left:8px solid #0F4C5C;padding:18px 24px">
+      <b style="background:#0F4C5C;width:56px;height:56px;font-size:26px">01</b>
+      <div>
+        <span style="font-size:30px">第一節：失智與神經退化</span>
+        <small style="font-size:21px">評估 · AD · 突觸核蛋白 · 額顳葉 · VCID · 新藥</small>
+      </div>
+    </div>
+    <div class="k-nc-dz" style="border-left:8px solid #C2410C;padding:18px 24px">
+      <b style="background:#C2410C;width:56px;height:56px;font-size:26px">02</b>
+      <div>
+        <span style="font-size:30px">第二節：腦血管與退化預防</span>
+        <small style="font-size:21px">負擔 · 共同框架（LE8）· 中風預防 · 14 因子</small>
+      </div>
+    </div>
+  </div>
+  <template class="k-narr">
+    <p data-step="0">各位同學好，今天的主題是失智症與神經退化疾病，以及腦血管與神經退化的預防。本堂課整合了2024到2026年最新的診斷準則與實證進展。</p>
+  </template>
+</section>
+
+<section class="k-slide" data-chapter="臨床案例" data-title="臨床決策情境：70 歲陳伯伯的認知障礙與危險因子">
+  <header class="k-head">
+    <h2 data-m="mask">開場案例：70 歲陳伯伯，這是哪一種失智？</h2>
+    <p class="k-sub">點選下方四個處方決策選項進行臨床演練（自動播放模式將依序揭曉實證解析）</p>
+  </header>
+  <div class="k-body" style="display:flex;flex-direction:column;justify-content:space-between">
+    <div class="k-case-wrap" style="gap:18px">
+      <div class="k-vignette" style="background:#F8FAFC;border-radius:16px;border:2px solid #CBD5E1;padding:16px 20px">
+        <span class="k-badge" style="background:#1F6FB2;color:#FFFFFF;padding:3px 10px;font-size:18px">門診真實案例（去識別化）</span>
+        <h3 style="margin:8px 0 6px;font-size:25px;color:#1E293B">70 歲男性｜高血壓不規則服藥 · 疑似 TIA 病史</h3>
+        <p style="font-size:19px;line-height:1.4;color:#334155;margin:0 0 10px">
+          數年前曾突發步態不穩與右側無力（急診迅速恢復）；近 1 年短期記憶衰退、出門迷路；近兩週步態緩慢拖足、頻尿、嗆咳，情緒低落說「很想早點死了算了」。
+        </p>
+        <div style="background:#FFFFFF;border-radius:10px;padding:10px 14px;border-left:5px solid #C2410C">
+          <strong style="color:#C2410C;font-size:19px">門診決策挑戰：</strong>面對多重症狀，第一線醫師「當天首要且最緊急」之處置為何？
+        </div>
+      </div>
+      <div class="k-case-opts" data-m="rise" style="gap:10px">
+        <button class="k-opt bad" data-reveal="2" style="padding:10px 14px">
+          <span class="k-letter" style="width:42px;height:42px;font-size:22px">A</span>
+          <div>
+            <span class="k-say" style="font-size:20px">立即開立強效鎮靜劑或 Haloperidol 口服滴劑壓制負面情緒</span>
+            <p class="k-fb" style="font-size:18px;line-height:1.35;margin-top:4px"><strong style="color:#B5482F">✘ 高危處方：</strong>患者具步態不穩與嗆咳徵候，強效典型抗精神病藥易誘發錐體外徑症狀（EPS）、吸入性肺炎與骨折。</p>
+          </div>
+        </button>
+        <button class="k-opt good" data-reveal="3" style="padding:10px 14px">
+          <span class="k-letter" style="width:42px;height:42px;font-size:22px">B</span>
+          <div>
+            <span class="k-say" style="font-size:20px">當天優先評估自殺風險與防護，同步安排 MRI 鑑別血管與 AD 混合型</span>
+            <p class="k-fb" style="font-size:18px;line-height:1.35;margin-top:4px"><strong style="color:#3F7A55">✔ 最佳臨床決策：</strong>「想死」屬急性自殺意念，須當天評估安全防護；陳伯伯具皮質下症狀，應由 MRI 鑑別混合型。</p>
+          </div>
+        </button>
+        <button class="k-opt bad" data-reveal="4" style="padding:10px 14px">
+          <span class="k-letter" style="width:42px;height:42px;font-size:22px">C</span>
+          <div>
+            <span class="k-say" style="font-size:20px">單純視為年老健忘，僅開立銀杏並請家屬三個月後再回診</span>
+            <p class="k-fb" style="font-size:18px;line-height:1.35;margin-top:4px"><strong style="color:#B5482F">✘ 延誤診斷：</strong>已有 TIA、局灶症狀與明確日常生活受損，屬病態性認知障礙，銀杏無實證且延誤預防時機。</p>
+          </div>
+        </button>
+        <button class="k-opt bad" data-reveal="4" style="padding:10px 14px">
+          <span class="k-letter" style="width:42px;height:42px;font-size:22px">D</span>
+          <div>
+            <span class="k-say" style="font-size:20px">認定為純阿茲海默症，直接單用高劑量膽鹼酯酶抑制劑而不排查血管病變</span>
+            <p class="k-fb" style="font-size:18px;line-height:1.35;margin-top:4px"><strong style="color:#B5482F">✘ 忽視病因：</strong>高齡失智最常見為「混合型（AD + 血管性）」，忽視腦血管預防將導致反覆中風持續惡化認知。</p>
+          </div>
+        </button>
+      </div>
+    </div>
+    <div class="k-take" style="background:#F8FAFC;border-left:8px solid #1F6FB2;padding:10px 16px;font-size:20px">
+      <strong>教學核心提點：</strong>高齡患者最常見血管與神經退化混合病理。此外，「自殺意念」是當天首要處置的安全紅旗！
+    </div>
+    <p class="k-cite">出處：改寫自授課教師門診真實臨床病例（去識別化）｜Cheng YC et al., JCMA 2026 [PMID 41527161]</p>
+  </div>
+  <template class="k-narr">
+    <p data-step="0">陳伯伯有血管危險因子、疑似 TIA、階梯式認知退化與步態不穩。請同學先不要急著下診斷：高齡病人常是混合型病理，而自殺意念是當天就要處理的安全議題。</p>
+  </template>
+</section>
+
+<section class="k-slide" data-chapter="認知評估" data-title="認知障礙四階段鑑別：界線在於日常功能">
+  <header class="k-head">
+    <h2 data-m="mask">從正常老化到失智症：四個階段的界線在「功能」</h2>
+    <p class="k-sub">客觀測驗是否異常、日常生活是否需要協助，是區分 SCD、MCI 與失智症的兩把尺</p>
+  </header>
+  <div class="k-body" style="display:flex;flex-direction:column;justify-content:space-between">
+    <div class="k-tbl-wrap" data-m="rise">
+      <table class="k-tbl">
+        <thead>
+          <tr style="background:#F0F4F8">
+            <th style="width:18%">階段</th>
+            <th style="width:20%">主觀抱怨</th>
+            <th style="width:20%">客觀測驗</th>
+            <th style="width:20%">日常功能</th>
+            <th style="width:22%">臨床處置重點</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>正常老化</strong></td>
+            <td>偶爾健忘、提示後想得起</td>
+            <td>正常常模內</td>
+            <td>完全獨立</td>
+            <td>健康生活型態、認知刺激與社交參與</td>
+          </tr>
+          <tr>
+            <td><strong>主觀認知減退 (SCD)</strong></td>
+            <td>自覺明顯退步、持續擔憂</td>
+            <td>測驗正常</td>
+            <td>完全獨立</td>
+            <td>部分為超早期 AD；定期追蹤、排查睡眠與情緒</td>
+          </tr>
+          <tr style="background:#EBF5FB;border-left:6px solid #1F6FB2">
+            <td><strong style="color:#1F6FB2">輕度認知障礙 (MCI)</strong></td>
+            <td>本人或同住家屬明確察覺</td>
+            <td>低於常模（約 1–1.5 SD）</td>
+            <td>基本自理獨立，複雜事務費力</td>
+            <td>65 歲以上追蹤 2 年累積失智率 14.9%，生物標記分流</td>
+          </tr>
+          <tr>
+            <td><strong>失智症 (Dementia)</strong></td>
+            <td>常由家屬察覺並帶來就醫</td>
+            <td>兩個以上領域顯著異常</td>
+            <td>需他人協助（IADL/ADL 受損）</td>
+            <td>病因鑑別、症狀治療、照護計畫與安全防護</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="k-take" style="background:#EBF5FB;border-left:8px solid #1F6FB2;padding:12px 18px">
+      <strong>臨床關鍵要訣：</strong>MCI 不是「一定會變失智」；部分病患可維持穩定甚至逆轉，因此需要定期追蹤評估，而非提早給予不可逆的失智標籤。
+    </div>
+    <p class="k-cite">資料來源：Petersen RC, et al. Neurology 2018;90:126–135. [PMID 29282327]（AAN MCI 臨床指引；流行病學實證參考）</p>
+  </div>
+  <template class="k-narr">
+    <p data-step="0">四個階段的關鍵差別在兩把尺：客觀測驗和日常功能。SCD 是自己覺得變差但測驗正常；MCI 是測驗真的異常，但生活大致獨立；失智症則是日常生活功能已經受損。</p>
+  </template>
+</section>
+
+<section class="k-slide" data-chapter="阿茲海默症" data-title="APP 代謝雙路徑：α 非澱粉生成 vs β/γ 澱粉生成路徑">
+  <header class="k-head">
+    <h2 data-m="mask">APP 代謝雙路徑：α 非澱粉 vs β→γ 澱粉生成路徑</h2>
+    <p class="k-sub">APP、PSEN1、PSEN2 基因突變皆促使切割偏向 β→γ 路徑，是早發型家族性 AD 的核心分子機轉</p>
+  </header>
+  <div class="k-body" style="display:flex;flex-direction:column;justify-content:space-between">
+    <div class="k-g2" style="gap:24px;align-items:stretch" data-m="rise">
+      <!-- 左側：非澱粉生成路徑 -->
+      <div style="background:#F4FBF7;border-radius:18px;border:3px solid #3F7A55;padding:22px">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px">
+          <span style="background:#3F7A55;color:#FFFFFF;padding:4px 12px;border-radius:8px;font-size:20px;font-weight:900">非澱粉路徑 (Non-amyloidogenic)</span>
+          <span style="color:#3F7A55;font-weight:700">生理保護</span>
+        </div>
+        <p style="font-size:20px;line-height:1.45;color:#2D3748;margin:0 0 14px">由 <strong>α-分泌酶（ADAM10）</strong> 先行切割：切點位於 Aβ 胜肽序列內部（第 16 號胺基酸），直接破壞 Aβ 的生成結構。</p>
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <div style="background:#FFFFFF;border-radius:12px;padding:10px 14px;border-left:6px solid #3F7A55;font-size:19px">
+            <strong style="color:#3F7A55">第 1 步：α-分泌酶切割</strong> → 釋放神經保護性的可溶性 <strong>sAPPα</strong>，細胞膜殘留 C83 片段
+          </div>
+          <div style="background:#FFFFFF;border-radius:12px;padding:10px 14px;border-left:6px solid #3F7A55;font-size:19px">
+            <strong style="color:#3F7A55">第 2 步：γ-分泌酶切割</strong> → 釋出無神經毒性的 <strong>p3 片段</strong> 與 AICD，不聚集為斑塊
+          </div>
+        </div>
+      </div>
+
+      <!-- 右側：澱粉生成路徑 -->
+      <div style="background:#FDF5F4;border-radius:18px;border:3px solid #C2410C;padding:22px">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px">
+          <span style="background:#C2410C;color:#FFFFFF;padding:4px 12px;border-radius:8px;font-size:20px;font-weight:900">澱粉生成路徑 (Amyloidogenic)</span>
+          <span style="color:#C2410C;font-weight:700">病理毒性</span>
+        </div>
+        <p style="font-size:20px;line-height:1.45;color:#2D3748;margin:0 0 14px">由 <strong>β-分泌酶（BACE1）</strong> 與 <strong>γ-分泌酶（PSEN1/2）</strong> 序貫切割：生成疏水性強、極易聚集之 Aβ40 及 <strong>Aβ42</strong>。</p>
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;text-align:center">
+            <div style="background:#FFFFFF;padding:8px 4px;border-radius:10px;border:2px solid #E2E8F0;font-weight:700;font-size:18px">Aβ 單體</div>
+            <div style="background:#FEEDEA;padding:8px 4px;border-radius:10px;border:2px solid #C2410C;font-weight:900;color:#C2410C;font-size:18px">寡聚體★</div>
+            <div style="background:#FCE8E5;padding:8px 4px;border-radius:10px;border:2px solid #C2410C;font-weight:700;font-size:18px">原纖維</div>
+            <div style="background:#C2410C;color:#FFFFFF;padding:8px 4px;border-radius:10px;font-weight:900;font-size:18px">老年斑塊</div>
+          </div>
+          <div style="background:#FFFFFF;border-radius:12px;padding:8px 12px;font-size:19px;color:#4A5568">
+            <strong>靶向治療：</strong>Lecanemab 親和原纖維；Donanemab 靶向斑塊修飾 AβpE3。
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="k-take" style="background:#FDF5F4;border-left:8px solid #C2410C;padding:12px 18px">
+      <strong>病理核心機制：</strong>Aβ42 具有最高聚集傾向，其可溶性寡聚體是誘發突觸毒性、長時期增益受損（LTP）及次發性過度磷酸化 Tau 蔓延之核心啟動因子。
+    </div>
+    <p class="k-cite">資料來源：Jack CR Jr, et al. Alzheimers Dement 2024;20:5143–5169 [PMID 38934362]；Heneka MT, et al. Lancet 2024;404:2198–2208 [PMID 39549715]</p>
+  </div>
+  <template class="k-narr">
+    <p data-step="0">APP 是穿膜蛋白。若由 α-分泌酶切割，切在 Aβ 胜肽中間，生成無害的 p3 片段；若由 β-分泌酶 BACE1 與 γ-分泌酶切割，就會釋放出 Aβ40 與 Aβ42，進一步聚集成毒性寡聚體與斑塊。</p>
+  </template>
+</section>
+
+<section class="k-slide" data-chapter="血管性失智" data-title="血管性認知障礙四大病理機轉與亞型分流">
+  <header class="k-head">
+    <h2 data-m="mask">血管性認知障礙（VCID）四大病理機轉與臨床表現</h2>
+    <p class="k-sub">點選下方分頁檢視不同血管病變對腦部結構與神經迴路之破壞模式</p>
+  </header>
+  <div class="k-body" style="display:flex;flex-direction:column;justify-content:space-between">
+    <div class="k-tabs" data-m="rise">
+      <button data-step-btn="0">1. 大血管多發梗塞 (Multi-infarct)</button>
+      <button data-step-btn="1">2. 皮質下小血管病 (SVD)</button>
+      <button data-step-btn="2">3. 戰略部位梗塞 (Strategic)</button>
+      <button data-step-btn="3">4. 腦微出血與低灌流 (Hypoperfusion)</button>
+    </div>
+
+    <!-- Tab 1 -->
+    <div class="k-panel" data-s="0" data-sto="1" style="background:#FFF9F5;border:3px solid #C2410C;border-radius:18px;padding:22px">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
+        <h3 style="margin:0;font-size:28px;color:#C2410C">皮質大血管多發性梗塞（Cortical Multi-infarct Dementia）</h3>
+        <span class="k-badge" style="background:#C2410C;color:#FFFFFF">階梯式惡化 (Stepwise)</span>
+      </div>
+      <p style="font-size:21px;line-height:1.45;color:#2D3748;margin:0 0 12px">由頸動脈狹窄或心因性栓塞造成多次皮質大中型中風，累積組織壞死體積通常超過 50–100 mL。</p>
+      <div class="k-g2" style="gap:16px">
+        <div style="background:#FFFFFF;padding:12px 16px;border-radius:12px;font-size:19px">
+          <strong>臨床病程：</strong>突發性認知缺損、多次中風後呈明顯階梯式功能退化（Stepwise decline），伴隨局部神經學徵候。
+        </div>
+        <div style="background:#FFFFFF;padding:12px 16px;border-radius:12px;font-size:19px">
+          <strong>預防關鍵：</strong>二級預防為首要——抗血小板或抗凝血劑（心房顫動）、降血壓及頸動脈再通術。
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab 2 -->
+    <div class="k-panel k-alt" data-s="1" data-sto="1" style="background:#F0F7FF;border:3px solid #1F6FB2;border-radius:18px;padding:22px">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
+        <h3 style="margin:0;font-size:28px;color:#1F6FB2">皮質下缺血性小血管病（Subcortical Ischemic Vascular Dementia）</h3>
+        <span class="k-badge" style="background:#1F6FB2;color:#FFFFFF">隱襲緩慢進展</span>
+      </div>
+      <p style="font-size:21px;line-height:1.45;color:#2D3748;margin:0 0 12px">細小穿通動脈硬化引起廣泛性腦白質高訊號（WMH）、多發腔隙性梗塞（Lacunes）與血管周圍間隙擴大。</p>
+      <div class="k-g2" style="gap:16px">
+        <div style="background:#FFFFFF;padding:12px 16px;border-radius:12px;font-size:19px">
+          <strong>臨床病程：</strong>無典型大中風病史，呈隱襲漸進式惡化；以額葉皮質下迴路中斷為特徵，處理速度減慢、執行功能缺損顯著。
+        </div>
+        <div style="background:#FFFFFF;padding:12px 16px;border-radius:12px;font-size:19px">
+          <strong>伴隨特徵：</strong>步態不穩、動作遲緩、假性延髓性麻痺與頻尿尿失禁；影像可見顯著微結構破壞。
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab 3 -->
+    <div class="k-panel k-alt" data-s="2" data-sto="2" style="background:#F7F4FA;border:3px solid #5B3FA0;border-radius:18px;padding:22px">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
+        <h3 style="margin:0;font-size:28px;color:#5B3FA0">戰略部位梗塞（Strategic Infarct Dementia）</h3>
+        <span class="k-badge" style="background:#5B3FA0;color:#FFFFFF">單一關鍵梗塞點</span>
+      </div>
+      <p style="font-size:21px;line-height:1.45;color:#2D3748;margin:0 0 12px">體積雖小，但病灶位於高度關鍵之認知迴路交叉節點，單一病灶即可立即引發全面性或領域性失智。</p>
+      <div class="k-g2" style="gap:16px">
+        <div style="background:#FFFFFF;padding:12px 16px;border-radius:12px;font-size:19px">
+          <strong>關鍵腦區：</strong>視丘（Thalamus，結節結締動脈）、海馬迴、角回（Angular gyrus）、扣帶回、尾狀核前端。
+        </div>
+        <div style="background:#FFFFFF;padding:12px 16px;border-radius:12px;font-size:19px">
+          <strong>臨床表現：</strong>常突發記憶力喪失、冷漠、性格突變、急性混亂狀態或執行失能，易被誤診為精神疾病。
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab 4 -->
+    <div class="k-panel k-alt" data-s="3" style="background:#FAFBF6;border:3px solid #4D7C0F;border-radius:18px;padding:22px">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
+        <h3 style="margin:0;font-size:28px;color:#4D7C0F">腦微出血、CAA 與慢性低灌流（Microbleeds & Hypoperfusion）</h3>
+        <span class="k-badge" style="background:#4D7C0F;color:#FFFFFF">微出血與分水嶺缺血</span>
+      </div>
+      <p style="font-size:21px;line-height:1.45;color:#2D3748;margin:0 0 12px">高血壓深層微出血、腦澱粉樣血管病變（CAA 葉性微出血／皮質表面含鐵血黃素）與心衰竭／低血壓低灌流。</p>
+      <div class="k-g2" style="gap:16px">
+        <div style="background:#FFFFFF;padding:12px 16px;border-radius:12px;font-size:19px">
+          <strong>CAA 臨床考量：</strong>皮質表面含鐵血黃素沉積（cSS）是嚴重腦出血危險因子，亦限制抗類澱粉抗體使用。
+        </div>
+        <div style="background:#FFFFFF;padding:12px 16px;border-radius:12px;font-size:19px">
+          <strong>分水嶺缺血：</strong>大腦前動脈與中動脈交界分水嶺梗塞，易引發注意力與皮質連結網絡失效。
+        </div>
+      </div>
+    </div>
+
+    <div class="k-take" style="background:#FFF9F5;border-left:8px solid #C2410C;padding:12px 18px">
+      <strong>共病防線：</strong>任何引起腦中風的因子皆能導致 VCID；高齡患者最常見血管病理與 AD 共存之「混合型失智」，積極控制血管危險因子亦可延緩神經退化。
+    </div>
+    <p class="k-cite">資料來源：Dichgans M, Leys D. Circ Res 2017;120:573–591 [PMID 28154105]；VasCog-2-WSO Consensus, JAMA Neurol 2025 [PMID 40955506]</p>
+  </div>
+  <template class="k-narr">
+    <p data-step="0">血管性認知障礙主要涵蓋四大病理機轉：大血管多發性梗塞、皮質下缺血性小血管病、戰略部位梗塞，以及腦微出血與慢性低灌流。高齡患者常見混合型失智。</p>
+    <p data-step="1">第二個分頁是皮質下缺血性小血管病，以額葉皮質下迴路中斷為特徵。</p>
+    <p data-step="2">第三個分頁是戰略部位梗塞，單一關鍵節點病灶即可引發失智。</p>
+    <p data-step="3">第四個分頁是微出血與慢性低灌流，與 CAA 及腦出血風險密切相關。</p>
+  </template>
+</section>
+
+<section class="k-slide" data-chapter="治療與預防" data-title="抗類澱粉抗體里程碑：Lecanemab vs Donanemab 實證對比">
+  <header class="k-head">
+    <h2 data-m="mask">抗類澱粉抗體：Lecanemab 與 Donanemab 比較</h2>
+    <p class="k-sub">從臨床療效、類澱粉清除率、ARIA 不良事件到 2026 台灣食藥署（TFDA）安全監測規範</p>
+  </header>
+  <div class="k-body" style="display:flex;flex-direction:column;justify-content:space-between">
+    <div class="k-tbl-wrap" data-m="rise">
+      <table class="k-tbl">
+        <thead>
+          <tr style="background:#EBF5FB">
+            <th style="width:20%">比較項目</th>
+            <th style="width:40%">Lecanemab（Leqembi）｜Clarity AD</th>
+            <th style="width:40%">Donanemab（Kisunla）｜TRAILBLAZER-ALZ 2</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>作用靶點</strong></td>
+            <td>高親和性結合<strong>可溶性 Aβ 原纖維 (Protofibrils)</strong></td>
+            <td>專一性結合<strong>不溶性斑塊上焦麩胺酸 AβpE3</strong></td>
+          </tr>
+          <tr>
+            <td><strong>收案族群</strong></td>
+            <td>MCI 及輕度失智；MMSE 22–30；Aβ 陽性</td>
+            <td>MCI 及輕度失智；MMSE 20–28；Aβ 陽性＋tau PET 分層</td>
+          </tr>
+          <tr style="background:#F0FDF4">
+            <td><strong>臨床終點減緩</strong></td>
+            <td><strong>CDR-SB 減緩 27%</strong>（差異 −0.45 分，p &lt; 0.001）</td>
+            <td><strong>iADRS 減緩 35%</strong>（中度 tau 族群）；CDR-SB 減緩 29%</td>
+          </tr>
+          <tr>
+            <td><strong>類澱粉清除</strong></td>
+            <td>18 個月 Centiloid 下降 −59 分（多數轉陰性）</td>
+            <td>76 週高達 <strong>76% 達到類澱粉陰性</strong></td>
+          </tr>
+          <tr style="background:#FFF5F5">
+            <td><strong>ARIA-E（水腫）</strong></td>
+            <td><strong>12.6%</strong>（有症狀者 2.8%）；ApoE4/4 為 32.6%</td>
+            <td><strong>24.0%</strong>（有症狀者 6.1%）；ApoE4/4 為 40.6%</td>
+          </tr>
+          <tr>
+            <td><strong>給藥策略</strong></td>
+            <td>每兩週靜脈輸注；FDA 2026 核准皮下維持劑型</td>
+            <td>每四週靜脈輸注；<strong>達到斑塊清除後可停藥 (Finite dosing)</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="k-take" style="background:#F0FDF4;border-left:8px solid #2E8B74;padding:12px 18px">
+      <strong>TFDA 2026 安全鐵律：</strong>治療前必須進行 ApoE 基因檢測評估 ARIA 風險；前 6 個月（第 1、2、3、6 個月）必須常規追蹤排程腦部 MRI，出現臨床症狀時立即暫停給藥。
+    </div>
+    <p class="k-cite">資料來源：van Dyck CH, et al. NEJM 2023;388:9–21 [PMID 36449413]；Sims JR, et al. JAMA 2023;330:512–527 [PMID 37459141]；TFDA 2026 仿單修訂公告</p>
+  </div>
+  <template class="k-narr">
+    <p data-step="0">這張投影片並排對比兩大疾病修飾抗體。Lecanemab 與 Donanemab 效果量相近，但靶點、ARIA 風險與停藥策略不同：Donanemab 清除斑塊後可停藥，但 ARIA 比例較高；治療前務必確認 ApoE 基因型。</p>
+  </template>
+</section>
+
+<section class="k-slide k-ncover" data-title="結語與交流">
+  <div class="k-nc-l" style="padding:100px 0 0 100px;flex:0 0 1150px">
+    <p class="k-nc-kick" style="font-size:26px">課程小結 · 核心綱領回顧</p>
+    <h1 style="font-size:72px;line-height:1.2;margin-top:14px">早期診斷 · 標靶修飾<br>腦血管與認知雙重預防</h1>
+    <div style="display:flex;flex-direction:column;gap:12px;margin-top:22px;max-width:980px">
+      <div style="background:#FFFFFF;border-radius:12px;padding:12px 18px;border-left:6px solid #0F4C5C;font-size:20px">
+        <strong style="color:#0F4C5C">1. 認知光譜與功能界線：</strong>由 SCD、MCI 到失智症，以日常生活功能為尺；早期排查可逆病因。
+      </div>
+      <div style="background:#FFFFFF;border-radius:12px;padding:12px 18px;border-left:6px solid #C2410C;font-size:20px">
+        <strong style="color:#C2410C">2. 精準生物學世代：</strong>血液標記與 PET 讓 AD 邁入生物分期；抗類澱粉抗體開啟疾病修飾新紀元。
+      </div>
+      <div style="background:#FFFFFF;border-radius:12px;padding:12px 18px;border-left:6px solid #1F6FB2;font-size:20px">
+        <strong style="color:#1F6FB2">3. 血管與神經共同防線：</strong>控制 SBP &lt; 120 mmHg 與實踐 LE8，是防範腦中風與神經退化的最根本基石。
+      </div>
+    </div>
+    <div class="k-nc-meta" style="padding-bottom:50px">
+      <p class="k-who" style="font-size:28px">陳培豪 醫師 ｜ 歡迎學術交流與討論</p>
+      <p style="font-size:22px">馬偕紀念醫院 神經科 · 失智防治中心 ｜ a7662888@gmail.com</p>
+    </div>
+  </div>
+  <div class="k-nc-r" style="padding:60px 80px 60px 20px;align-items:center;justify-content:center">
+    <div style="background:#FFFFFF;padding:24px;border-radius:20px;border:2px solid #E2E8F0;text-align:center;box-shadow:0 8px 24px rgba(0,0,0,0.06);max-width:400px">
+      <img src="assets/qrcode.png" alt="講義線上完整版 QR Code" style="width:260px;height:260px;display:block;margin:0 auto 12px;background:#FFFFFF;border-radius:12px">
+      <span style="font-size:22px;font-weight:900;color:#1E293B">手機掃描線上互動講義</span>
+      <p style="font-size:16px;color:#64748B;margin:6px 0 0">醫學系課程專用 · 支援跨平台瀏覽與檢索</p>
+    </div>
+  </div>
+  <template class="k-narr">
+    <p data-step="0">謝謝各位同學的聆聽。希望今天的課程能為大家在臨床面對失智症、神經退化與腦血管預防時，建立起扎實而清晰的決策架構。</p>
+  </template>
+</section>
+
+<div id="k-chrome" aria-hidden="true">
+  <span id="k-chapter"></span>
+  <span id="k-track"><span id="k-bar" style="display:block"></span></span>
+  <span id="k-counter"></span>
+</div>
+<div id="k-sub" aria-live="polite"></div>
+</main>
+
+
+<!-- 開場選單 -->
+<div id="k-start" role="dialog" aria-label="選擇播放方式"><div class="box">
+  <h1>失智症與神經退化疾病＋腦血管疾病與中樞神經退化疾病的預防</h1>
+  <p class="meta">陳培豪 醫師｜</p>
+  <div class="modes">
+    <div class="mode">
+      <h2>🎤 主講模式</h2>
+      <p>我自己講、自己翻頁。<br>← → 翻頁與逐步揭示，N 看逐字稿，O 總覽，B 黑屏。</p>
+      <button class="go" id="kgo-present">開始主講</button>
+    </div>
+    <div class="mode">
+      <h2>▶ 自動播放</h2>
+      <p>配音、字幕、配樂自動帶完整場。</p>
+      <div class="opt" data-opt="voice"></div>
+      <div class="opt" data-opt="sub"><b>字幕</b><label><input type="checkbox" checked>顯示</label></div>
+      <div class="opt" data-opt="bgm"><b>配樂</b><label><input type="checkbox" checked>播放</label></div>
+      <button class="go sage" id="kgo-auto">開始自動播放</button>
+    </div>
+  </div>
+  <p class="kb">版本 20261103-5de8｜自動播放中：空白鍵 暫停／繼續｜← → 上一句／下一句｜S 字幕｜M 配樂｜移動滑鼠叫出控制列，「選單」回到這裡</p>
+</div></div>
+
+<!-- 控制列 -->
+<div id="k-ctl" role="toolbar" aria-label="播放控制">
+  <button id="kb-prev" title="上一步">◀</button>
+  <button id="kb-play" class="main auto-only">▶ 播放</button>
+  <button id="kb-next" title="下一步">▶</button>
+  <span class="t auto-only" id="kb-time"></span>
+  <button id="kb-voice" class="auto-only">配音</button>
+  <button id="kb-sub" class="auto-only" aria-pressed="true">字幕</button>
+  <button id="kb-bgm" aria-pressed="true">配樂</button>
+  <button id="kb-notes" class="present-only">講稿</button>
+  <button id="kb-ov">總覽</button>
+  <button id="kb-fs">全螢幕</button>
+  <button id="kb-menu">選單</button>
+</div>
+
+<div id="k-end"><div class="box"><p>播放完畢，謝謝收看</p><button id="kend-again">再播一次</button><button id="kend-menu">回到選單</button></div></div>
+<div id="k-black"></div>
+<div id="k-overview" aria-label="投影片總覽"><div id="k-ovgrid"></div></div>
+<aside class="k-panelx" id="k-notes"><h3>逐字稿（目前這一步標亮）</h3><div id="k-notesbody"></div></aside>
+
+<audio id="k-voice" preload="auto"></audio>
+<audio id="k-bgm" preload="auto" loop></audio>
+<script src="beats.js?v=a0cc81f3"></script>
+<script src="deck.js?v=2153d9d1"></script>
+</body>
+</html>
