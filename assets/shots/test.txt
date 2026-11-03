@@ -1,0 +1,11 @@
+who|https://www.who.int/news-room/fact-sheets/detail/dementia
+jama|https://jamanetwork.com/journals/jama/fullarticle/2807533
+nejm|https://www.nejm.org/doi/full/10.1056/NEJMoa2212948
+lancet|https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(24)01296-0/fulltext
+aha|https://www.ahajournals.org/doi/10.1161/STR.0000000000000475
+epmc|https://europepmc.org/article/MED/39429201
+wiley|https://alz-journals.onlinelibrary.wiley.com/doi/10.1002/alz.70535
+fda|https://www.fda.gov/news-events/press-announcements/fda-clears-first-blood-test-used-diagnosing-alzheimers-disease
+mohw|https://www.mohw.gov.tw/cp-16-78102-1.html
+pmc|https://pmc.ncbi.nlm.nih.gov/articles/PMC12058522/
+nature|https://www.nature.com/articles/s41586-025-08800-x
